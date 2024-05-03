@@ -1,5 +1,5 @@
 import sendRequest from "./send-request";
-const BASE_URL = 'http://localhost:3001/api/goals';
+const BASE_URL = '/api/goals';
 
 export async function getAll() {
     return sendRequest(BASE_URL)

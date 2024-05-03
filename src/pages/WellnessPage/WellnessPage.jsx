@@ -33,12 +33,10 @@ export default function HomePage() {
     }
 
     function handleAspectClick(aspect) {
-        if(getGoals(aspect)) {
-            setGoalInput(aspect)
-        }
-        else if(getHabits(aspect)) {
-            setHabitInput(aspect)
-        }
+        getGoals(aspect)
+        setGoalInput(aspect)
+        getHabits(aspect)
+        setHabitInput(aspect)
     }
 
     function handleGoalChange(e) {

@@ -31,6 +31,14 @@ app.use('/api/aspects', require('./routes/api/aspects'));
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+app.get('/recipes/chicken', async(req, res) => {
+  const response = await axios.get(
+    `https://api.edamam.com/search?q=chicken&app_id=${process.env.APP_ID}&app_key=${process.env.APP_KEY}`
+  )
+  console.log(response.data)
+  res.json(response.data)
+
+})
 
 const port = process.env.PORT || 3001;
 
