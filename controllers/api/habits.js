@@ -15,12 +15,9 @@ async function index(req, res) {
 async function show(req, res) {
     const habit = await Habit.findById(req.params.id)
     res.json(habit)
-
 }
 
 async function getAspectHabits(req, res) {
-    console.log(req.params.id)
-    console.log(req.user)
     const aspect = req.params.id
     const user = req.user._id
     const habit = await Habit.find({aspect, user})

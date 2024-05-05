@@ -6,6 +6,7 @@ import HomePage from '../HomePage/HomePage';
 import WellnessPage from '../WellnessPage/WellnessPage';
 import SearchPage from '../SearchPage/SearchPage';
 import NavBar from '../../components/NavBar/NavBar';
+import RecipePage from '../RecipePage/RecipePage'
 import './App.css';
 
 function App() {
@@ -20,13 +21,13 @@ function App() {
             {/* Route components in here */}
             <Route path="/" element={<HomePage />} />
             <Route path="/wellness" element={<WellnessPage />} />
-            <Route path="/search" element={<SearchPage />} />
+            <Route path="/recipes" element={<RecipePage />} />
           </Routes>
         </>
         :
           <AuthPage setUser={setUser} />
       }
-    </main>
+      </main>
   );
 }
 

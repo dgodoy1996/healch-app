@@ -4,7 +4,7 @@ import * as aspectsAPI from '../../utilities/aspects-api';
 import * as goalsAPI from '../../utilities/goals-api';
 import * as habitsAPI from '../../utilities/habits-api';
 
-export default function HomePage() {
+export default function WellnessPage() {
 
     const [aspects, setAspects] = useState([])
     const [goalInput, setGoalInput] = useState(null)
@@ -87,8 +87,8 @@ export default function HomePage() {
                     <div className="form-container + w-120 + " onSubmit={handleHabitSubmit} type="button">
                         <form>
                             <div>
-                            <h1>Habit:</h1>
-                            <input type="text" name="name" value={newHabit} onChange={handleHabitChange}/>
+                                <h1>Habit:</h1>
+                                <input type="text" name="name" value={newHabit} onChange={handleHabitChange}/>
                                 <button className="bg-#4a493b content-center">Submit</button>
                                 <br />
                             </div>
