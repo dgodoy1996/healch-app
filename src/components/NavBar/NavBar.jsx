@@ -11,16 +11,17 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    <nav>
+    <nav className='bg-stone-300  bg-cover h-10 text-2xl font-bold'>
       <Link to="/">Home</Link>
       &nbsp; | &nbsp;
       <Link to="/wellness">Wellness</Link>
       &nbsp; | &nbsp;
       <Link to="/recipes">RecipePage</Link>
       &nbsp; | &nbsp;
-      <span>Welcome, {user.name}</span>
+      <span className='font-light'>Welcome, {user.name}</span>
       &nbsp; | &nbsp;
       <Link to="" onClick={handleLogOut}>Log Out</Link>
+      <br />
     </nav>
   );
 }

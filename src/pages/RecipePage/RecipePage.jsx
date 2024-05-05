@@ -27,11 +27,13 @@ export default function RecipePage() {
   return (
     <div>
       <br />
-      <div className='form-container + shrink w-170 h-50 flex items-center max-w-md mx-auto shadow rounded border-0 p-3 flex '>
-        <form className="flex flex-col justify-center items-center" onSubmit={handleSubmit}>
-          <input className="input + shrink w-100 h-50" type="text" value={query} onChange={(e) => setQuery(e.target.value)} placeholder='Search for recipes...'/>
-          <button className="search-button + bg-#4a493b w-20" type="submit">Search</button>
-        </form>
+      <div className="flex items-center justify-center">
+        <div className='form-container bg-stone-300'>
+          <form onSubmit={handleSubmit} className='flex items-center justify-center'>
+            <input className="" type="text" value={query} onChange={(e) => setQuery(e.target.value)} placeholder='Search for recipes...'/>
+            <button className="search-button + bg-#4a493b w-20" type="submit">Search</button>
+          </form>
+        </div>
       </div>
       <br />
       <hr />

@@ -13,6 +13,7 @@ export default function WellnessPage() {
     const [habits, setHabits] = useState([])
     const [newGoal, setNewGoal] = useState("")
     const [newHabit, setNewHabit] = useState("")
+    const [activeAsp, setActiveAsp] = useState(null)
 
     useEffect(function() {
         async function getAspects() {
@@ -33,6 +34,7 @@ export default function WellnessPage() {
     }
 
     function handleAspectClick(aspect) {
+        setActiveAsp(aspect)
         getGoals(aspect)
         setGoalInput(aspect)
         getHabits(aspect)
@@ -79,21 +81,22 @@ export default function WellnessPage() {
                 <aside>
                     <AspectList
                         aspects={aspects}
+                        activeAsp={activeAsp}
                         onAspectClick={handleAspectClick}
                         />   
                 </aside>
                 <br /><br />
                 <div className="both-forms">
-                    <div className="form-container + w-120 + " onSubmit={handleHabitSubmit} type="button">
+                    <div className="form-container + w-120" onSubmit={handleHabitSubmit} type="button">
                         <form>
                             <div>
-                                <h1>Habit:</h1>
+                                <h1>Enter Your Habits:</h1>
                                 <input type="text" name="name" value={newHabit} onChange={handleHabitChange}/>
                                 <button className="bg-#4a493b content-center">Submit</button>
                                 <br />
                             </div>
                             <div>
-                                <h2>Submitted Habits:</h2>
+                                <h2>Habits:</h2>
                                 <ul>
                                     {habits.map((habit, index) => (
                                         <li key={index}>{habit.name}</li>
@@ -102,16 +105,19 @@ export default function WellnessPage() {
                             </div>
                         </form>
                     </div>
+                    <br />
+                    <br />
+                    <br />
                     <div className="form-container + w-120" onSubmit={handleGoalSubmit} type="button">
                         <form>
                             <div>
-                            <h1>Goals:</h1>
+                            <h1>Enter Your Goals:</h1>
                             <input type="text" name="name" value={newGoal} onChange={handleGoalChange}/>
                                 <button className="bg-#4a493b content-center">Submit</button>
                                 <br />
                             </div>
                             <div>
-                                <h2>Submitted Goals:</h2>
+                                <h2>Goals:</h2>
                                 <ul>
                                     {goals.map((goal, index) => (
                                         <li key={index}>{goal.name}</li>
@@ -131,6 +137,7 @@ export default function WellnessPage() {
                     <aside>
                         <AspectList
                             aspects={aspects}
+                            activeAsp={activeAsp}
                             onAspectClick={handleAspectClick}
                             />   
                     </aside>
