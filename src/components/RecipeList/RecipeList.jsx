@@ -5,10 +5,12 @@ export default function RecipeList({ title, image, ingredients }) {
                 <h1>{title}</h1>
                 <ul>
                         <form>
-                            {ingredients.map(ingredient => (
-                                <li>{ingredient.text}</li>
-                            ))}
                             <img className="image + object-center" src={image} alt=""/>
+                            <div>
+                                {ingredients.map(ingredient => (
+                                    <li>{ingredient.text}</li>
+                                ))}
+                            </div>
                         </form>
                     <br />
                     <br />
