@@ -1,21 +1,24 @@
-export default function RecipeList({ title, image, ingredients }) {
+export default function RecipeList({ title, image, ingredients, url, uri }) {
     return (
         <div>
-            <div className="form-container">
-                <h1>{title}</h1>
+            <br />
+                <a href={url} target="_blank" rel="noopener noreferrer">{title}</a>
+                <br />
+                <br />
                 <ul>
                         <form>
-                            <img className="image + object-center" src={image} alt=""/>
+                            <img className="image" src={image} alt=""/>
                             <div>
                                 {ingredients.map(ingredient => (
-                                    <li>{ingredient.text}</li>
+                                    <li key={uri}>{ingredient.text}</li>
+                                    
                                 ))}
                             </div>
                         </form>
                     <br />
                     <br />
+                        <hr />
                 </ul>
-            </div>
         </div>
     )
 }
