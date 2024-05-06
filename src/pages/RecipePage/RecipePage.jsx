@@ -8,12 +8,9 @@ export default function RecipePage() {
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
 
-  const API_ID = 'dcff87f8';
-  const APP_KEY = '3c5eb14159cfd3770203b4ef5a39e0f7';
-
   const fetchRecipes = async () => {
     try {
-      const response = await axios.get(`https://api.edamam.com/search?q=${query}&app_id=${API_ID}&app_key=${APP_KEY}`);
+      const response = await axios.get(`https://api.edamam.com/search?q=${query}&app_id=${process.env.REACT_APP_APP_ID}&app_key=${process.env.REACT_APP_APP_KEY}`);
       setRecipes(response.data.hits);
     } catch (error) {
       console.error('Error fetching recipes:', error);
@@ -29,6 +26,7 @@ export default function RecipePage() {
     setRecipes([recipe]); // Save only the selected recipe
     navigate('/recipes/my-recipes/');
   };
+  console.log(recipes)
 
   return (
     <div>
@@ -48,9 +46,9 @@ export default function RecipePage() {
       <hr />
       <div>
         <aside>
-          {recipes.map(recipe => (
+          {recipes.map((recipe, index) => (
             <RecipeList
-              key={recipe.recipe.label}
+              key={index + 1}
               title={recipe.recipe.label}
               image={recipe.recipe.image}
               ingredients={recipe.recipe.ingredients}

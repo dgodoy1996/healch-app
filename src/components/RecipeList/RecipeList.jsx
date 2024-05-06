@@ -17,8 +17,8 @@ export default function RecipeList({ title, image, ingredients, url, uri }) {
                 <img className="image" src={image} alt="" />
               </div>
               <div>
-                {ingredients.map(ingredient => (
-                  <li key={uri}>{ingredient.text}</li>
+                {ingredients.map((ingredient, index) => (
+                  <li key={index + uri}>{ingredient.text}</li>
                 ))}
               </div>
             </form>

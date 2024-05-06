@@ -86,30 +86,28 @@ export default function WellnessPage() {
                 </aside>
                 <br /><br />
                 <div className="flow-root">
-                    <div className="float-left">
-                        {/* <div> */}
-                            <div className="form-container + max-w-sm mx-auto" onSubmit={handleHabitSubmit} type="button">
-                                <form>
-                                    <div>
-                                        <h1>Enter Your Habits:</h1>
-                                        <input type="text" name="name" value={newHabit} onChange={handleHabitChange}/>
-                                        <button className="bg-#4a493b content-center">Submit</button>
-                                        <br />
-                                    </div>
-                                    <div>
-                                        <h2>Habits:</h2>
-                                        <ul>
-                                            {habits.map((habit, index) => (
-                                                <li key={index}>{habit.name}</li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </form>
-                            </div>
-                        {/* </div> */}
+                    <div className="float-left absolute left-60">
+                        <div className="form-container + max-w-sm mx-auto" onSubmit={handleHabitSubmit} type="button">
+                            <form>
+                                <div>
+                                    <h1>Enter Your Habits:</h1>
+                                    <input type="text" name="name" value={newHabit} onChange={handleHabitChange}/>
+                                    <button className="bg-#4a493b content-center">Submit</button>
+                                    <br />
+                                </div>
+                                <div>
+                                    <h2>Habits:</h2>
+                                    <ul>
+                                        {habits.map((habit, index) => (
+                                            <li key={index}>{habit.name}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
                     </div>
 
-                    <div className="float-right">
+                    <div className="float-right absolute right-60">
                             <div className="form-container + max-w-sm mx-auto" onSubmit={handleGoalSubmit} type="button">
                                 <form>
                                     <div>
