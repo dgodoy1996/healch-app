@@ -19,8 +19,7 @@ export default function NavBar({ user, setUser }) {
         <span>&nbsp; | &nbsp;</span>
         <Link to="/recipes">Search Recipes</Link>
         <span>&nbsp; | &nbsp;</span>
-        <Link to="/recipes/my-recipes">My Recipes</Link>
-        <span>&nbsp; | &nbsp;</span>
+
         <span className='font-light'>Welcome, {user.name}</span>
         <span>&nbsp; | &nbsp;</span>
         <Link to="" onClick={handleLogOut}>Log Out</Link>

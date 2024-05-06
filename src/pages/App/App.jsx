@@ -6,7 +6,6 @@ import HomePage from '../HomePage/HomePage';
 import WellnessPage from '../WellnessPage/WellnessPage';
 import NavBar from '../../components/NavBar/NavBar';
 import RecipePage from '../RecipePage/RecipePage'
-import MyRecipesPage from '../MyRecipesPage/MyRecipesPage'
 import './App.css';
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/wellness" element={<WellnessPage />} />
             <Route path="/recipes" element={<RecipePage />} />
-            <Route path="/recipes/my-recipes" element={<MyRecipesPage />} />
           </Routes>
         </>
         :
