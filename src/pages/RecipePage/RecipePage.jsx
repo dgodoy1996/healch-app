@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import RecipeList from '../../components/RecipeList/RecipeList';
 
@@ -30,7 +29,10 @@ export default function RecipePage() {
       <div className="flex items-center justify-center">
         <div className='form-container bg-stone-300'>
           <form onSubmit={handleSubmit} className='flex items-center justify-center'>
-            <input className="" type="text" value={query} onChange={(e) => setQuery(e.target.value)} placeholder='Search for recipes...'/>
+            <div>
+              <h1>Find your favorite and healthy recipes here!</h1>
+            </div>
+            <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} placeholder='Search for recipes...'/>
             <button className="search-button + bg-#4a493b w-20" type="submit">Search</button>
           </form>
         </div>
@@ -47,6 +49,7 @@ export default function RecipePage() {
             ingredients={recipe.recipe.ingredients}
             url={recipe.recipe.url}
             uri={recipe.recipe.uri}
+            // onSaveClick={}
             />
           ))}
         </aside>

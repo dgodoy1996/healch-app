@@ -16,7 +16,9 @@ export default function NavBar({ user, setUser }) {
       &nbsp; | &nbsp;
       <Link to="/wellness">Wellness</Link>
       &nbsp; | &nbsp;
-      <Link to="/recipes">RecipePage</Link>
+      <Link to="/recipes">Search Recipes</Link>
+      &nbsp; | &nbsp;
+      <Link to="/recipes/my-recipes">My Recipes</Link>
       &nbsp; | &nbsp;
       <span className='font-light'>Welcome, {user.name}</span>
       &nbsp; | &nbsp;

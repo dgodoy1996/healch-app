@@ -28,6 +28,10 @@ body {
   padding: 2vmin;
   height: 100vh;
   background: url("/bgimg.png");
+  background-size: cover; 
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 code {
