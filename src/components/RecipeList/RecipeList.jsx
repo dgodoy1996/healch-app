@@ -1,6 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function RecipeList({ title, image, ingredients, url, uri }) {
+  const navigate = useNavigate()
+  function myRecipesPage() {
+    navigate('/recipes/my-recipes')
+  }
   return (
     <div>
       <br />
@@ -11,7 +16,7 @@ export default function RecipeList({ title, image, ingredients, url, uri }) {
         <br /><br />
         <div className="flex items-center justify-center">
           <div className="form-container">
-            <form>
+            <form onSubmit={myRecipesPage(title)}>
               <div>
                 <img className="image" src={image} alt="" />
               </div>
@@ -20,6 +25,7 @@ export default function RecipeList({ title, image, ingredients, url, uri }) {
                   <li key={uri}>{ingredient.text}</li>
                 ))}
               </div>
+              <button>Save Recipe</button>
             </form>
           </div>
         </div>

@@ -85,50 +85,51 @@ export default function WellnessPage() {
                     />   
                 </aside>
                 <br /><br />
-                <div>
-                    <div className="flex items-center justify-center">
-                        <div className="form-container" onSubmit={handleHabitSubmit} type="button">
-                            <form>
-                                <div>
-                                    <h1>Enter Your Habits:</h1>
-                                    <input type="text" name="name" value={newHabit} onChange={handleHabitChange}/>
-                                    <button className="bg-#4a493b content-center">Submit</button>
-                                    <br />
-                                </div>
-                                <div>
-                                    <h2>Habits:</h2>
-                                    <ul>
-                                        {habits.map((habit, index) => (
-                                            <li key={index}>{habit.name}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </form>
-                        </div>
+                <div className="flow-root">
+                    <div className="float-left">
+                        {/* <div> */}
+                            <div className="form-container + max-w-sm mx-auto" onSubmit={handleHabitSubmit} type="button">
+                                <form>
+                                    <div>
+                                        <h1>Enter Your Habits:</h1>
+                                        <input type="text" name="name" value={newHabit} onChange={handleHabitChange}/>
+                                        <button className="bg-#4a493b content-center">Submit</button>
+                                        <br />
+                                    </div>
+                                    <div>
+                                        <h2>Habits:</h2>
+                                        <ul>
+                                            {habits.map((habit, index) => (
+                                                <li key={index}>{habit.name}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
+                        {/* </div> */}
                     </div>
-                </div>
-                <br />
-                <br />
-                <br />
-                <div className="form-container + w-120" onSubmit={handleGoalSubmit} type="button">
-                    <form>
-                        <div>
-                        <h1>Enter Your Goals:</h1>
-                        <input type="text" name="name" value={newGoal} onChange={handleGoalChange}/>
-                            <button className="bg-#4a493b content-center">Submit</button>
-                            <br />
+
+                    <div className="float-right">
+                            <div className="form-container + max-w-sm mx-auto" onSubmit={handleGoalSubmit} type="button">
+                                <form>
+                                    <div>
+                                    <h1>Enter Your Goals:</h1>
+                                    <input type="text" name="name" value={newGoal} onChange={handleGoalChange}/>
+                                        <button className="bg-#4a493b content-center">Submit</button>
+                                        <br />
+                                    </div>
+                                    <div>
+                                        <h2>Goals:</h2>
+                                        <ul>
+                                            {goals.map((goal, index) => (
+                                                <li key={index}>{goal.name}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <div>
-                            <h2>Goals:</h2>
-                            <ul>
-                                {goals.map((goal, index) => (
-                                    <li key={index}>{goal.name}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    </form>
                 </div>
-                
             </main>
         );
     } else {
