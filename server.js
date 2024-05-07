@@ -29,11 +29,9 @@ app.use('/api/aspects', require('./routes/api/aspects'));
 
 // "catch-all" route that will match all GET requests
 // that don't match an API route defined above
-const root = require('path').join(__dirname, 'src', 'build')
-app.use(express.static(root));
-app.get("*", (req, res) => {
-    res.sendFile('index.html', { root });
-})
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 app.get('/recipes/:query', async(req, res) => {
   const response = await axios.get(
     `https://api.edamam.com/search?q=${req.params.query}&app_id=${process.env.APP_ID}&app_key=${process.env.API_KEY}`
