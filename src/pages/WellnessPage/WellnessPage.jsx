@@ -86,7 +86,7 @@ export default function WellnessPage() {
                 </aside>
                 <br /><br />
                 <div className="flow-root">
-                    <div className="float-left absolute left-60">
+                    <div className="float-left absolute left-40">
                         <div className="form-container + max-w-sm mx-auto" onSubmit={handleHabitSubmit} type="button">
                             <form>
                                 <div>
@@ -107,7 +107,7 @@ export default function WellnessPage() {
                         </div>
                     </div>
 
-                    <div className="float-right absolute right-60">
+                    <div className="float-right absolute right-40">
                             <div className="form-container + max-w-sm mx-auto" onSubmit={handleGoalSubmit} type="button">
                                 <form>
                                     <div>
