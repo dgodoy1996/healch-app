@@ -56,7 +56,7 @@ export default function WellnessPage() {
             name: newGoal,
             aspect: goalInput
         }
-        const createdGoal = await goalsAPI.createGoals(goalInput, goal)
+        await goalsAPI.createGoals(goalInput, goal)
         setNewGoal('')
         getGoals(goalInput)
       };
@@ -67,7 +67,7 @@ export default function WellnessPage() {
             name: newHabit,
             aspect: habitInput
         }
-        const createdHabit = await habitsAPI.createHabits(habitInput, habit)
+        await habitsAPI.createHabits(habitInput, habit)
         setNewHabit('')
         getHabits(habitInput)
       }
