@@ -1,5 +1,5 @@
 # Vital Guidance
-A description of your game. Background info of the game is a nice touch.
+Vital Guidance is a place you can find recipes and keep yourself accountable! There are 12 aspects of life that are important to keep balanced! On here, you can keep track of your current habits you want to change and goals you'd like to meet!
 
 # Screenshot
 
@@ -14,11 +14,11 @@ A description of your game. Background info of the game is a nice touch.
 - MongoDB
 - CSS
 - Tailwind
-- 
+- Edamam API
 
 # Getting Started
 
-https://vital-guidance-40d63953db09.herokuapp.com/
+https://vital-guidance-9bb0a525080e.herokuapp.com/
 
 # Next Steps
 
