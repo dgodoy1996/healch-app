@@ -29,8 +29,10 @@ app.use('/api/aspects', require('./routes/api/aspects'));
 
 // "catch-all" route that will match all GET requests
 // that don't match an API route defined above
+const root = require('path').join(__dirname, 'build')
+app.use(express.static(root))
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile('index.html', {root});
 });
 app.get('/recipes/:query', async(req, res) => {
   const response = await axios.get(

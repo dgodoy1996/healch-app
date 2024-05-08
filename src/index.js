@@ -8,7 +8,7 @@ import App from './pages/App/App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router basename='https://vital-guidance-40d63953db09.herokuapp.com/'><App /></Router>
+    <Router><App /></Router>
   </React.StrictMode>
 );
 
